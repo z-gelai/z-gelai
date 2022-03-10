@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>返校通行证(2分钟内有效)</title>
+    <link rel="stylesheet" href="css/weui.min.css">
+    <script type="text/javascript" src="js/Untitled-1.js" charset="UTF-8"></script>
+</head>
+<body ontouchstart>
+<style type="text/css">
+.myttpp{
+	border: none;
+}
+</style>
+<div id="bodyDiv">
+	<script type="text/javascript">
+		var getTime=function () {
+			var nowDate;
+			var nowTime;
+			var t = new Date();
+			var year = t.getFullYear();
+			var month = t.getMonth()+1;
+			var day = t.getDate();
+			var hour = t.getHours()<10?"0"+t.getHours():t.getHours();
+			var minute = t.getMinutes()<10?"0"+t.getMinutes():t.getMinutes();
+			var second = t.getSeconds()<10?"0"+t.getSeconds():t.getSeconds();
+			nowDate = year+"/"+month+"/"+day;
+			nowTime=hour+":"+minute+":"+second;
+			document.getElementById("xtime").innerText=nowTime;
+			document.getElementById("xdate").innerText="时间："+nowDate;
+			return getTime;
+		}
+		setInterval(getTime,0);
+		setInterval(getTime,1000);
+	</script>
+	<div style="text-align:center;" id="imgBg"><br/><img src="images/pass1.png" alt="" id="pic"><br/>
+		<h1 style="text-align:center;" id="xtime"></h1>
+	</div>
+	<div class="weui-cells__title">学生返校通行证</div>
+	<div class="weui-cells">
+		<div class="weui-cell  weui-cell_example">
+			<div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+			<div class="weui-cell__bd">
+				<p>学号：<script>var va1=localStorage.value1
+			document.write(va1)</script></p>
+			</div>
+		</div>
+		<div class="weui-cell  weui-cell_example">
+			<div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+			<div class="weui-cell__bd">
+				<p>姓名：<script>var va2=localStorage.value2
+			document.write(va2)</script></p>
+			</div>
+		</div>
+		<div class="weui-cell  weui-cell_example">
+			<div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+			<div class="weui-cell__bd">
+				<p>学院：<script>var va3=localStorage.value3
+			document.write(va3)</script></p>
+			</div>
+		</div>
+		<div class="weui-cell  weui-cell_example">
+			<div class="weui-cell__hd"><img src="images/time.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+			<div class="weui-cell__bd">
+				<p id="xdate"></p>
+			</div>
+		</div>
+		
+	</div>
+	<br/>
+	<br/>
+	<div class="weui-footer">
+	<p>版权所有 &copy; 辽宁大学</p>
+	</div>
+</div>
+<script type="text/javascript" src="js/Untitled-1.js"></script>
+</body>
+</html>

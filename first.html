@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>不知名程序员</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+  <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+  <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+  <link href="files/index/styles.css" type="text/css" rel="stylesheet"/>
+  <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+  <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+  <script src="resources/scripts/prototypePre.js"></script>
+  <script src="data/document.js"></script>
+  <script src="resources/scripts/prototypePost.js"></script>
+  <script src="files/index/data.js"></script>
+  <script type="text/javascript" src="js/Untitled-1.js" charset="UTF-8"></script>
+  <script type="text/javascript">
+    $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+    $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+    $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+
+    function load() {
+      var first_name_arr = ["张", "王", "李", "赵","陈","潘","胡","孙","郑","杨"];
+      var last_name_arr =("梁栋维启克伦翔旭鹏泽晨辰士以建家" +
+              "致树炎盛雄琛钧冠策腾楠榕风航弘义兴" +
+              "良飞彬富和鸣朋斌行时泰博磊民友志清坚庆若德彪伟刚勇毅" +
+              "俊峰强军平保东文辉力明永健世海山仁波宁福生龙元全国胜" +
+              "学祥才发武新利顺信子杰涛昌成康星光天达安岩中茂进林有诚先" +
+              "敬震振壮会思群豪心邦承乐绍功松善厚裕").split("");
+      var collage_arr=["信息学院","环境学院","物理学院","药学院","化学院"];
+      var first_name = first_name_arr[random(0,first_name_arr.length-1)];
+      var last_name_1=last_name_arr[random(0,last_name_arr.length-1)];
+      var last_name_2=last_name_arr[random(0,last_name_arr.length-1)];
+      var collage=collage_arr[random(0,collage_arr.length-1)];
+
+      var stu_id = "403214";
+      for (var i = 0; i < 4; i++) {
+        stu_id=stu_id+random(1,9);
+      }
+      var u1_input = document.getElementById("u1_input");
+      var u2_input = document.getElementById("u2_input");
+      var u3_input = document.getElementById("u3_input");
+      u1_input.value=stu_id;
+      u2_input.value=first_name+last_name_1+last_name_2;
+      u3_input.value=collage;
+
+    }
+  </script>
+
+
+
+</head>
+<body onload="load()">
+<div id="base" class="">
+
+  <!-- Unnamed (矩形) -->
+  <div id="u0" class="ax_default box_2">
+    <div id="u0_div" class=""></div>
+  </div>
+
+  <!-- Unnamed (文本框) -->
+  <div id="u1" class="ax_default text_field">
+    <input id="u1_input" type="text" value="" maxlength="11"/>
+  </div>
+
+  <!-- Unnamed (文本框) -->
+  <div id="u2" class="ax_default text_field">
+    <input id="u2_input" type="text" value=""/>
+  </div>
+
+  <!-- Unnamed (文本框) -->
+  <div id="u3" class="ax_default text_field">
+    <input id="u3_input" type="text" value=""/>
+  </div>
+
+  <div id="u7">
+	  <iframe src="colorselecter.html"
+	  width="100%" height="100%" scrolling="no" style="border:0px;" name="colors1">
+	  </iframe>
+	  
+  </div>
+  <!-- Unnamed (提交按钮) -->
+  <div id="u4" class="ax_default html_button">
+    <input id="u4_input" type="button" value="提交"/>
+    <script>
+      document.getElementById("u4_input").onclick=function(){
+        if (window.localStorage) {
+          localStorage.value1=document.getElementById("u1_input").value;
+          localStorage.value2=document.getElementById("u2_input").value;
+          localStorage.value3=document.getElementById("u3_input").value;
+          localStorage.value4=window.frames["colors1"].document.getElementById("color_value").value; 
+          location.href="second.html";
+        }else{
+          alert("不支持")
+        }
+      }
+    </script>
+
+  </div>
+</div>
